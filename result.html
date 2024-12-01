@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Arisha">
-  <title>Results</title>
+  <title>Index - Form</title>
+  
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Link to external JavaScript file (if any) -->
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Thank You for Submitting Your Form</h1>
-    <p><strong>Name:</strong> <span id="name"></span></p>
-    <p><strong>Email:</strong> <span id="email"></span></p>
-    <p><strong>Gender:</strong> <span id="gender"></span></p>
-    <p><strong>Age:</strong> <span id="age"></span></p>
-    <p><strong>Favorite Color:</strong> <span id="color"></span></p>
-    <p><strong>Subscribe to Newsletter:</strong> <span id="subscribe"></span></p>
-    <p><strong>Preferred Contact Method:</strong> <span id="contact-method"></span></p>
-    <a href="index.html" class="btn">Go Back</a>
-  </div>
+  <header>
+    <h1>Welcome to the Form Page</h1>
+  </header>
 
-  <script>
-    // Get URL parameters
-    const params = new URLSearchParams(window.location.search);
+  <!-- Form for input -->
+  <form action="result.html" method="GET">
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" name="userInput" required>
+    
+    <button type="submit">Submit</button>
+  </form>
 
-    // Display the user input on the page
-    document.getElementById('name').textContent = params.get('name');
-    document.getElementById('email').textContent = params.get('email');
-    document.getElementById('gender').textContent = params.get('gender');
-    document.getElementById('age').textContent = params.get('age');
-    document.getElementById('color').textContent = params.get('color');
-    document.getElementById('subscribe').textContent = params.get('subscribe') ? 'Yes' : 'No';
-    document.getElementById('contact-method').textContent = params.get('contact-method');
-  </script>
+  <footer>
+    <p>© 2024 Arisha</p>
+  </footer>
 </body>
-</html>
 
+</html>
