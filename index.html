@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fill Out the Form</h1>
+    <form action="results.html" method="get">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- Gender (Radio Buttons) -->
+      <div class="form-group">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other"><label for="other">Other</label>
+      </div>
+
+      <!-- Age (Number Input) -->
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="1" max="120">
+      </div>
+
+      <!-- Favorite Color (Color Input) -->
+      <div class="form-group">
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+      </div>
+
+      <!-- Subscribe to Newsletter (Checkbox) -->
+      <div class="form-group">
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="Yes">
+      </div>
+
+      <!-- Preferred Contact Method (Dropdown) -->
+      <div class="form-group">
+        <label for="contact-method">Preferred Contact Method:</label>
+        <select id="contact-method" name="contact-method">
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
 
