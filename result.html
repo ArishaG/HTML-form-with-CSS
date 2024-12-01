@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Arisha">
-  <title>Index - Form</title>
+  <title>Result Page</title>
   
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
@@ -16,20 +16,23 @@
 
 <body>
   <header>
-    <h1>Welcome to the Form Page</h1>
+    <h1>Result of Your Input</h1>
   </header>
 
-  <!-- Form for input -->
-  <form action="result.html" method="GET">
-    <label for="userInput">Enter something:</label>
-    <input type="text" id="userInput" name="userInput" required>
-    
-    <button type="submit">Submit</button>
-  </form>
+  <section>
+    <p>You entered: <span id="userInputResult"></span></p>
+  </section>
 
   <footer>
     <p>© 2024 Arisha</p>
   </footer>
+
+  <script>
+    // Fetch the query parameter from the URL and display it
+    const urlParams = new URLSearchParams(window.location.search);
+    const userInput = urlParams.get('userInput');
+    document.getElementById('userInputResult').textContent = userInput ? userInput : "No input provided";
+  </script>
 </body>
 
 </html>
