@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You for Submitting Your Form</h1>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Gender:</strong> <span id="gender"></span></p>
+    <p><strong>Age:</strong> <span id="age"></span></p>
+    <p><strong>Favorite Color:</strong> <span id="color"></span></p>
+    <p><strong>Subscribe to Newsletter:</strong> <span id="subscribe"></span></p>
+    <p><strong>Preferred Contact Method:</strong> <span id="contact-method"></span></p>
+    <a href="index.html" class="btn">Go Back</a>
+  </div>
+
+  <script>
+    // Get URL parameters
+    const params = new URLSearchParams(window.location.search);
+
+    // Display the user input on the page
+    document.getElementById('name').textContent = params.get('name');
+    document.getElementById('email').textContent = params.get('email');
+    document.getElementById('gender').textContent = params.get('gender');
+    document.getElementById('age').textContent = params.get('age');
+    document.getElementById('color').textContent = params.get('color');
+    document.getElementById('subscribe').textContent = params.get('subscribe') ? 'Yes' : 'No';
+    document.getElementById('contact-method').textContent = params.get('contact-method');
+  </script>
+</body>
+</html>
 
