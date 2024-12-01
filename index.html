@@ -1,67 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stylish Form</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="author" content="Arisha">
+  <title>Results</title>
+  
+  <!-- Link to external CSS file (if you have one) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Link to JavaScript file (if you have one) -->
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Fill Out the Form</h1>
-    <form action="results.html" method="get">
-      <!-- Name -->
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-      </div>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+  </header>
+  
+  <!-- Navigation links to other HTML files -->
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
 
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
+  <!-- Main content -->
+  <section>
+    <p>This is the main content of the index page.</p>
+  </section>
 
-      <!-- Gender (Radio Buttons) -->
-      <div class="form-group">
-        <label>Gender:</label>
-        <input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="Other"><label for="other">Other</label>
-      </div>
-
-      <!-- Age (Number Input) -->
-      <div class="form-group">
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required min="1" max="120">
-      </div>
-
-      <!-- Favorite Color (Color Input) -->
-      <div class="form-group">
-        <label for="color">Favorite Color:</label>
-        <input type="color" id="color" name="color">
-      </div>
-
-      <!-- Subscribe to Newsletter (Checkbox) -->
-      <div class="form-group">
-        <label for="subscribe">Subscribe to newsletter:</label>
-        <input type="checkbox" id="subscribe" name="subscribe" value="Yes">
-      </div>
-
-      <!-- Preferred Contact Method (Dropdown) -->
-      <div class="form-group">
-        <label for="contact-method">Preferred Contact Method:</label>
-        <select id="contact-method" name="contact-method">
-          <option value="email">Email</option>
-          <option value="phone">Phone</option>
-          <option value="none">None</option>
-        </select>
-      </div>
-
-      <!-- Submit Button -->
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </div>
+  <footer>
+    <p>© 2024 Arisha</p>
+  </footer>
 </body>
-</html>
 
+</html>
